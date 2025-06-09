@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammad Kashif - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="profile">
+            <div class="profile-info">
+                <h1>Mohammad Kashif</h1>
+                <h2>Software Engineer</h2>
+                <p>
+                    As a Software Engineer at HSBC, I specialize in Python, SQL, and
+                    PySpark, with a strong background in Mathematics and Computer
+                    Science. I hold a Bachelor's in Computer Engineering and have
+                    contributed to multiple research publications. Beyond my
+                    professional life, I love traveling and seeking new adventures. My
+                    blend of technical skills and passion for exploration drives my
+                    innovative approach to challenges.
+                </p>
+                <div class="education">
+                    <span>PhD in Biology</span>
+                    <span>ML Specialist</span>
+                </div>
+            </div>
+            <div class="profile-photo">
+                <img src="assets/kashif_pic.jpg" alt="Profile Photo" />
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <h2>Publications</h2>
+        <div class="publication">
+            <div class="slideshow-container">
+                <!-- Images for the slideshow -->
+                <div class="mySlides">
+                    <img src="assets/display_images/bulba.png" style="width:100%" class="slide-image">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/display_images/char.png" style="width:100%" class="slide-image">
+                </div>
+                <div class="mySlides">
+                    <img src="assets/display_images/pikachu.jpg" style="width:100%" class="slide-image">
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+            <div class="publication-info">
+                <h3>Stacked ensemble-based mutagenicity prediction model using multiple modalities with graph attention
+                    network</h3>
+                <p>Nature Biotechnology, 2023</p>
+                <p>STEM is a stacked ensemble framework for mutagenicity prediction
+                    that integrates SMILES-based descriptors, molecular fingerprints,
+                    and graph representations via Graph Attention Networks. It achieves
+                    state-of-the-art performance (AUC 95.21% on the Hansen dataset) and
+                    leverages SHAP analysis for model interpretability, offering both
+                    predictive strength and explainability for chemical safety
+                    assessment.</p>
+                <div class="publication-links">
+                    <a href="#">Paper Link</a>
+                    <a href="#">Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-image">
+                <img src="path_to_research_graph" alt="Research Graph" />
+            </div>
+            <div class="publication-info">
+                <h3>Second Publication Title</h3>
+                <p>Journal Name, Year</p>
+                <p>
+                    Description of the second publication. Add details about the
+                    research, findings, and any other relevant information.
+                </p>
+                <div class="publication-links">
+                    <a href="#">Paper Link</a>
+                    <a href="#">Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="publication">
+            <div class="publication-image">
+                <img src="path_to_research_graph" alt="Research Graph" />
+            </div>
+            <div class="publication-info">
+                <h3>Third Publication Title</h3>
+                <p>Journal Name, Year</p>
+                <p>
+                    Description of the third publication. Add details about the
+                    research, findings, and any other relevant information.
+                </p>
+                <div class="publication-links">
+                    <a href="#">Paper Link</a>
+                    <a href="#">Github</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="experience-timeline">
+            <div class="job latest">
+                <div class="job-header">
+                    <h3>Software Engineer</h3>
+                    <div class="job-meta">
+                        <span class="job-company">
+                        <img src="assets/logos/HSBC-Logo.png" alt="HSBC Logo" class="company-logo">
+                        HSBC
+                    </span>
+                        <span class="job-location-time">Hyderabad, India | July 2024 - Present</span>
+                    </div>
+                </div>
+                <p class="job-responsibilities">
+                    Key Responsibilities: Responsibility 1. Responsibility 2.
+                    Responsibility 3.
+                </p>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <h3>NLP Intern</h3>
+                    <div class="job-meta">
+                        <span class="job-company">
+                            <img src="assets/logos/brace.png" alt="Brace Logo" class="company-logo">
+                            Brace.so</span>
+                        <span class="job-location-time">Remote | Dec 2023 - Jan 2024</span>
+                    </div>
+                </div>
+                <p class="job-responsibilities">
+                    Key Responsibilities: Leading computational biology research
+                    projects, supervising graduate students, and collaborating with
+                    interdisciplinary teams on cutting-edge research initiatives.
+                </p>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Summer Research Intern</h3>
+                    <div class="job-meta">
+                        <span class="job-company">
+                            <img src="assets/logos/tmu_logo.png" alt="TMU Logo" class="company-logo">
+                            Toronto Metropolitan University</span>
+                        <span class="job-location-time">Toronto, Canada | Jun 2023 - Aug 2023</span>
+                    </div>
+                </div>
+                <p class="job-responsibilities">
+                    Key Responsibilities: Developed machine learning algorithms for
+                    protein structure prediction and drug discovery applications.
+                </p>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Summer Research Intern</h3>
+                    <div class="job-meta">
+                        <span class="job-company">
+                            <img src="assets/logos/iiit.png" alt="IIIT Logo" class="company-logo">
+                            IIIT-Allahabad</span>
+                        <span class="job-location-time">Remote | Jun 2022 - Jul 2022</span>
+                    </div>
+                </div>
+                <p class="job-responsibilities">
+                    Key Responsibilities: Developed machine learning algorithms for
+                    protein structure prediction and drug discovery applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <img src="path_to_project_screenshot" alt="Project Screenshot" />
+                <h3>GenomeAnalyzer Pro</h3>
+                <p>Advanced genomic data analysis platform with ML integration.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                </div>
+            </div>
+            <div class="project">
+                <img src="path_to_app_interface" alt="App Interface" />
+                <h3>ProteinFold AI</h3>
+                <p>Deep learning model for protein structure prediction.</p>
+                <div class="project-tech">
+                    <span>PyTorch</span>
+                    <span>CUDA</span>
+                </div>
+            </div>
+            <div class="project">
+                <img src="path_to_dashboard_view" alt="Dashboard View" />
+                <h3>BioStats Suite</h3>
+                <p>Statistical analysis toolkit for biological research.</p>
+                <div class="project-tech">
+                    <span>R</span>
+                    <span>Shiny</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="section">
+        <h2>Hobbies & Interests</h2>
+        <div class="hobby-grid">
+            <div class="hobby">
+                <img src="path_to_reading_icon" alt="Reading" />
+                <h3>Reading</h3>
+                <p>Science fiction and research papers</p>
+            </div>
+            <div class="hobby">
+                <img src="path_to_hiking_icon" alt="Hiking" />
+                <h3>Hiking</h3>
+                <p>Mountain trails and nature photography</p>
+            </div>
+            <div class="hobby">
+                <img src="path_to_chess_icon" alt="Chess" />
+                <h3>Chess</h3>
+                <p>Strategic thinking and tournaments</p>
+            </div>
+            <div class="hobby">
+                <img src="path_to_music_icon" alt="Music" />
+                <h3>Music</h3>
+                <p>Guitar playing and composition</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="section">
+        <h2>Curriculum Vitae</h2>
+        <p>
+            Download my complete CV to learn more about my academic background and
+            research experience.
+        </p>
+        <div class="cv-preview">
+            <img src="path_to_cv_preview" alt="CV Preview" />
+            <p>Dr. John Smith - CV</p>
+            <p>Last updated: March 2024</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
