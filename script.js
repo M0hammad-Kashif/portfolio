@@ -51,4 +51,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize slideshow
     showSlides();   
+
+
+    // Project slideshows
+    const projectSlideshows = document.querySelectorAll('.project-slideshow');
+    projectSlideshows.forEach((slideshow, idx) => {
+        let slideIndex = 0;
+        const slides = slideshow.querySelectorAll('.mySlides-project' + idx);
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 2000);
+        }
+        if (slides.length > 0) showSlides();
+    });
 });
