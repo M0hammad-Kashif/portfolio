@@ -498,7 +498,8 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible; /* allow hover effect to overflow */
+    z-index: 1;
 }
 
 .project .slide-image {
@@ -513,12 +514,17 @@ input:checked + .slider:before {
     margin: 0 auto;
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 1;
+    pointer-events: auto;
 }
 
 .project .slide-image:hover {
-    transform: scale(1.2);
-    z-index: 2;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    /* Remove hover effect */
+    transform: none;
+    position: static;
+    box-shadow: none;
+    background: inherit;
+    z-index: 1;
+    border: none;
 }
 
 .project .mySlides-project0,
