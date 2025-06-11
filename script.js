@@ -1,26 +1,28 @@
-// You can add JavaScript code here to handle button clicks and other interactive features
-document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function() {
-        alert('Button clicked!');
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
-    const checkbox = document.getElementById('checkbox');
-    checkbox.addEventListener('change', function() {
-        if(this.checked) {
-            document.body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
+    // Theme toggle button with icon
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    function setThemeIcon(isDark) {
+        themeIcon.src = isDark ? 'assets/icons/dark-192.png' : 'assets/icons/sun-192.png';
+        themeIcon.alt = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+    // Initial icon
+    setThemeIcon(document.body.getAttribute('data-theme') === 'dark');
+    themeToggle.addEventListener('click', function() {
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        if (isDark) {
             document.body.removeAttribute('data-theme');
             localStorage.setItem('theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
         }
+        setThemeIcon(!isDark);
     });
-
-    // Check for saved user preference, if any, on load
+    // On load, set icon if theme is dark
     if (localStorage.getItem('theme') === 'dark') {
         document.body.setAttribute('data-theme', 'dark');
-        checkbox.checked = true;
+        setThemeIcon(true);
     }
 
 

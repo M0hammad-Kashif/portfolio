@@ -7,26 +7,76 @@ body {
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    list-style: none;
+    background-color: var(--header-footer-color);
     padding: 0;
+    text-align: right;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    height: 64px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-nav ul li {
-    margin: 0 1rem;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 2rem 0 auto;
+    width: 100%;
 }
 
-nav ul li a {
+ul.navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+ul.navbar li {
+    margin: 0;
+}
+
+ul.navbar li a {
     text-decoration: none;
-    color: #007bff;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+ul.navbar li a:hover {
+    color: var(--text-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    margin-left: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    transition: background 0.2s;
+}
+
+#theme-toggle img {
+    width: 32px;
+    height: 32px;
+    transition: filter 0.3s;
+}
+
+body {
+    padding-top: 80px;
+    /* To prevent content from hiding behind fixed header */
 }
 
 .section {
@@ -566,6 +616,33 @@ input:checked + .slider:before {
 .project-scroll-wrapper::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    nav {
+        margin: 0 1rem 0 auto;
+    }
+    ul.navbar {
+        gap: 1rem;
+    }
+    #theme-toggle {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+        height: auto;
+    }
+    ul.navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #theme-toggle {
+        margin: 0.5rem 0 0 0;
+    }
 }
 
 @media (max-width: 900px) {
