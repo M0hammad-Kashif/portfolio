@@ -125,12 +125,17 @@ nav ul li a {
 }
 
 .project {
-    flex: 1;
-    background-color: #f8f9fa;
+    flex: 0 0 350px;
+    min-width: 300px;
+    max-width: 350px;
+    background-color: var(--section-color);
+    color: var(--text-color);
     border-radius: 8px;
     padding: 1rem;
     margin: 0 0.5rem;
     text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project img {
@@ -169,12 +174,14 @@ nav ul li a {
 }
 
 .cv-preview {
-    background-color: #f8f9fa;
+    background-color: var(--section-color);
+    color: var(--text-color);
     border-radius: 8px;
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cv-preview .cv-thumbnail {
@@ -184,6 +191,7 @@ nav ul li a {
     cursor: pointer;
     transition: box-shadow 0.2s, transform 0.2s;
     margin-bottom: 1rem;
+    background: var(--section-color);
 }
 
 .cv-preview .cv-thumbnail:hover {
@@ -491,12 +499,14 @@ input:checked + .slider:before {
     flex: 0 0 350px;
     min-width: 300px;
     max-width: 350px;
-    background-color: #f8f9fa;
+    background-color: var(--section-color);
+    color: var(--text-color);
     border-radius: 8px;
     padding: 1rem;
     margin: 0 0.5rem;
     text-align: center;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project .slideshow-container {
