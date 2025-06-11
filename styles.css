@@ -20,29 +20,52 @@ header {
     height: 64px;
     display: flex;
     align-items: center;
+    margin-bottom: 1.5rem; /* Add gap below navbar */
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     height: 64px;
     max-width: 1200px;
     margin: 0 2rem 0 auto;
     width: 100%;
+    position: relative;
+}
+
+.sticky-name {
+    display: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 2rem;
+    margin-left: 0.5rem;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    align-self: center;
+    order: 0;
+}
+
+.sticky-name.visible {
+    display: inline-block;
+    opacity: 1;
 }
 
 ul.navbar {
-    list-style: none;
+    order: 1;
+    flex: 1;
+    justify-content: flex-end;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     gap: 2rem;
+    list-style: none; /* Remove default list styling */
 }
 
 ul.navbar li {
     margin: 0;
+    list-style: none; /* Ensure no dots even if overridden elsewhere */
 }
 
 ul.navbar li a {
@@ -58,6 +81,7 @@ ul.navbar li a:hover {
 }
 
 #theme-toggle {
+    order: 2;
     background: none;
     border: none;
     margin-left: 2rem;
@@ -75,7 +99,7 @@ ul.navbar li a:hover {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 96px; /* Keep enough space for fixed navbar */
     /* To prevent content from hiding behind fixed header */
 }
 
@@ -736,4 +760,20 @@ input:checked + .slider:before {
     .project-grid {
         min-width: 300px;
     }
+}
+
+.sticky-name {
+    display: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 2rem;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.sticky-name.visible {
+    display: inline-block;
+    opacity: 1;
 }

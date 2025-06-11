@@ -69,4 +69,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (slides.length > 0) showSlides();
     });
+
+
+    // Sticky name on scroll
+    const stickyName = document.getElementById('sticky-name');
+    const aboutSection = document.getElementById('about');
+    function handleStickyName() {
+        const aboutRect = aboutSection.getBoundingClientRect();
+        if (aboutRect.bottom <= 64) {
+            stickyName.classList.add('visible');
+        } else {
+            stickyName.classList.remove('visible');
+        }
+    }
+    window.addEventListener('scroll', handleStickyName);
+    handleStickyName();
 });
