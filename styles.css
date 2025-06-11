@@ -433,8 +433,8 @@ input:checked + .slider:before {
 
 
 .company-logo {
-    width: 60px; /* Adjust the size as needed */
-    height: auto;
+    width: auto; /* Adjust the size as needed */
+    height: 40px;
     margin-right: 0.5rem;
     vertical-align: middle;
 }
