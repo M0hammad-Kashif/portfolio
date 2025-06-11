@@ -396,12 +396,21 @@ header, footer {
     margin-right: 0.5rem;
 }
 
-.publication, .job, .project, .hobby {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
+.publication, .job, .project, .hobby, .cv-preview {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+    border: 1.5px solid var(--border-color);
     background-color: var(--section-color);
     color: var(--text-color);
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1.25rem;
+    transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+/* Optional: subtle hover effect for interactivity */
+.publication:hover, .job:hover, .project:hover, .hobby:hover, .cv-preview:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10);
+    border-color: var(--primary-color);
 }
 
 .theme-switch-wrapper {
