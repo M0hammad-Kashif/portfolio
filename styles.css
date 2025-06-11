@@ -198,13 +198,51 @@ body {
     margin-top: 1rem;
 }
 
-.project-tech span {
+.project-tech span,
+.project-tech a span {
     display: inline-block;
-    background-color: var(--header-footer-color);
-    color: var(--text-color);
+    background-color: #e9ecef;
+    color: #333;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 1.5px solid #d1d5db;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+    text-decoration: none;
+    cursor: default;
+}
+
+.project-tech a span {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project-tech span:hover,
+.project-tech a span:hover {
+    background-color: #d1eaff;
+    color: #007bff;
+    border-color: #007bff;
+    box-shadow: 0 4px 16px rgba(0,123,255,0.10);
+}
+
+[data-theme="dark"] .project-tech span,
+[data-theme="dark"] .project-tech a span {
+    background-color: #23272b;
+    color: #f0f0f0;
+    border: 1.5px solid #444;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+[data-theme="dark"] .project-tech span:hover,
+[data-theme="dark"] .project-tech a span:hover {
+    background-color: #232b3a;
+    color: #bb86fc;
+    border-color: #bb86fc;
+    box-shadow: 0 4px 16px rgba(187,134,252,0.10);
 }
 
 .hobby-grid {
