@@ -174,11 +174,21 @@ nav ul li a {
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.cv-preview img {
+.cv-preview .cv-thumbnail {
     max-width: 100%;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 1rem;
+}
+
+.cv-preview .cv-thumbnail:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    transform: scale(1.03);
 }
 
 .experience-timeline {
