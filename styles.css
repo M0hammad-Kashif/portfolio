@@ -130,12 +130,13 @@ nav ul li a {
     max-width: 350px;
     background-color: var(--section-color);
     color: var(--text-color);
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 0 0.5rem;
+    border-radius: 12px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    margin: 0 1.25rem 2rem 1.25rem; /* More horizontal and vertical spacing */
     text-align: center;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .project img {
@@ -149,7 +150,8 @@ nav ul li a {
 
 .project-tech span {
     display: inline-block;
-    background-color: #e9ecef;
+    background-color: var(--header-footer-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin-right: 0.5rem;
@@ -490,9 +492,12 @@ input:checked + .slider:before {
 .project-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
-    max-width: none;
-    min-width: 700px;
+    justify-content: flex-start;
+    gap: 2.5rem; /* Use gap for consistent spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding-bottom: 1rem;
 }
 
 .project {
@@ -501,12 +506,13 @@ input:checked + .slider:before {
     max-width: 350px;
     background-color: var(--section-color);
     color: var(--text-color);
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 0 0.5rem;
+    border-radius: 12px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    margin: 0 1.25rem 2rem 1.25rem; /* More horizontal and vertical spacing */
     text-align: center;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .project .slideshow-container {
