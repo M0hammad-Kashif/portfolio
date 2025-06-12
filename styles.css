@@ -777,3 +777,86 @@ input:checked + .slider:before {
     display: inline-block;
     opacity: 1;
 }
+
+.education-details.card {
+    background: linear-gradient(135deg, #f8fafc 60%, #e3f0ff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+    border: 1.5px solid var(--border-color);
+    padding: 1.5rem 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s;
+    max-width: 500px;
+}
+
+[data-theme="dark"] .education-details.card {
+    background: linear-gradient(135deg, #23272b 60%, #232b3a 100%);
+    color: var(--text-color);
+    border: 1.5px solid #444;
+}
+
+.edu-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.edu-icon {
+    font-size: 1.5rem;
+}
+.edu-degree {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.edu-univ {
+    font-size: 1rem;
+    color: #007bff;
+    margin-bottom: 0.25rem;
+}
+[data-theme="dark"] .edu-univ {
+    color: #bb86fc;
+}
+.edu-location {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+}
+[data-theme="dark"] .edu-location {
+    color: #aaa;
+}
+.edu-cgpa {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.edu-cgpa-value {
+    background: #e9ecef;
+    color: #007bff;
+    border-radius: 12px;
+    padding: 0.15rem 0.6rem;
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+[data-theme="dark"] .edu-cgpa-value {
+    background: #23272b;
+    color: #bb86fc;
+}
+.edu-courses {
+    margin-top: 0.5rem;
+}
+.edu-courses-list {
+    margin: 0.25rem 0 0 1.2rem;
+    padding: 0;
+    list-style: disc inside;
+    text-align: left;
+    color: inherit;
+}
+.edu-courses-list li {
+    margin-bottom: 0.15rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
