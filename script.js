@@ -26,33 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Slideshow functionality
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.mySlides');
-
-    function showSlides() {
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.style.display = 'none';
-        });
-
-        // Increment slide index
-        slideIndex++;
-
-        // Reset to first slide if at the end
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
+    // Independent slideshow for each publication
+    document.querySelectorAll('.slideshow-container').forEach(function(container) {
+        const slides = container.querySelectorAll('.mySlides');
+        let slideIndex = 0;
+        if (!slides.length) return;
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].style.display = 'block';
+            setTimeout(showSlides, 2000);
         }
-
-        // Show the current slide
-        slides[slideIndex - 1].style.display = 'block';
-
-        // Change slide every 2 seconds
+        // Show the first slide immediately
+        slides[0].style.display = 'block';
         setTimeout(showSlides, 2000);
-    }
-
-    // Initialize slideshow
-    showSlides();   
+    });
 
 
     // Project slideshows
