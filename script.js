@@ -72,4 +72,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', handleStickyName);
     handleStickyName();
+
+    // Hamburger menu for mobile
+    const hamburger = document.getElementById('hamburger-menu');
+    const navbar = document.getElementById('main-navbar');
+    hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('open');
+    });
+    // Close menu when a link is clicked (mobile UX)
+    navbar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 600) {
+                navbar.classList.remove('open');
+            }
+        });
+    });
 });
