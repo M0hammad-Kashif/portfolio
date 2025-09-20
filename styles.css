@@ -146,7 +146,7 @@ body {
 
 /* Social Links in About Section */
 .social-links {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 /* Show desktop social by default, hide mobile social */
@@ -180,8 +180,9 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .social-icon {
